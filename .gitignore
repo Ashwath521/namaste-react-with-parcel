@@ -4,4 +4,3 @@
 #production
 /dist
 /.parcel-cache
-/.js
