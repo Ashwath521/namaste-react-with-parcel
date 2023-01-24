@@ -3,4 +3,4 @@
 
 #production
 /dist
-/parcel-cache
+/.parcel-cache
