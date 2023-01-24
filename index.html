@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div id="head">
+
+    </div>
+    <div id="root">
+        <h1>not loaded</h1>
+    </div>
+    <div>
+        <h1>Footer</h1>
+    </div>
+
+
+    <!-- added html element dynamically with javascript -->
+    <!-- <script>
+        let heading = document.createElement('h1')
+        heading.innerHTML = "Namaste React"
+        let root = document.getElementById('root')
+        root.appendChild(heading)
+    </script> -->
+
+
+    <!-- added react cdn link for create html element with help of react -->
+    <!-- remove the crossorigin in script tag it will not make any difference -->
+
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+    <script type="module" src="index.js">
+
+        /* React script split or move into separate files for better performance and better readability
+         moved to index.js*/
+    </script>
+</body>
+
+</html>
