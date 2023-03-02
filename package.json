@@ -3,19 +3,31 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@parcel/transformer-css": "^2.8.3",
+    "@reduxjs/toolkit": "^1.9.3",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "parcel": "^2.8.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
-    "process": "^0.11.10"
-  }, "browserslist": [
+    "@babel/core": "^7.20.12",
+    "postcss": "^8.4.21",
+    "postcss-import": "^15.1.0",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.2.7"
+  },
+  "browserslist": [
     "defaults and supports es6-module",
     "maintained node versions"
   ]
