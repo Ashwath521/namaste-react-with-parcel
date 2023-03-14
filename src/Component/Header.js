@@ -2,19 +2,24 @@ import React, { useState, useContext } from "react";
 import Logo from "../assets/img/Foodvilla.jpg";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
-import { UserContext } from "../App";
+// import { UserContext } from "../App";
 import { useSelector } from "react-redux";
 const Title = () => {
   return (
     <div className="rounded-full">
-      <img className="h-20 w-20 rounded-lg" src={Logo} alt="food villa image" />
+      <img
+        data-testid="logo"
+        className="h-20 w-20 rounded-lg"
+        src={Logo}
+        alt="food villa image"
+      />
     </div>
   );
 };
 
 const HeaderComponent = () => {
-  const { user } = useContext(UserContext);
-  console.log(user);
+  // const { user } = useContext(UserContext);
+  // console.log(user);
   const cartItems = useSelector((state) => state.cart.items);
   console.log(cartItems);
   const [buttonShow, setButtonShow] = useState(true);
@@ -42,11 +47,15 @@ const HeaderComponent = () => {
               <li className="pr-4">InstMart</li>
             </Link>
             <Link to="/cart">
-              <li className="pr-4">Cart - {cartItems.length}-items</li>
+              <li className="pr-4" data-testid="cart">
+                Cart - {cartItems.length}-items
+              </li>
             </Link>
 
-            <h1 className="pr-4">{isOnline ? "✅" : "🔴"}</h1>
-            <h2>{user?.name}</h2>
+            <h1 className="pr-4" data-testid="online-status">
+              {isOnline ? "✅" : "🔴"}
+            </h1>
+            {/* <h2>{user?.name}</h2> */}
           </ul>
         </div>
         {buttonShow ? (

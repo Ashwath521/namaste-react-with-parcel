@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import HeaderComponent from "./Component/Header";
 import BodyComponent from "./Component/Body";
 import FooterComponent from "./Component/Footer";
@@ -85,5 +85,11 @@ const appRouter = createBrowserRouter([
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter} />);
+document.addEventListener("DOMContentLoaded", function (event) {
+  const root = document.getElementById("root");
+  if (root) {
+    ReactDOM.render(<RouterProvider router={appRouter} />, root);
+  } else {
+    console.error("Target container is not a DOM element");
+  }
+});

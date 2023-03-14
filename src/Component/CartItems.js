@@ -1,26 +1,17 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import FoodMenu from "./FoodMenu";
+import Test from "./Test";
 
 const CartItems = () => {
-  const cartItem = useSelector((state) => state.cart.items);
-  console.log(cartItem);
+  const cartItems = useSelector((state) => state.cart.items);
+
   return (
-    <>
-      <h1>cart items</h1>
-      <div>
-        {/* {cartItem.map((items) => {
-          <FoodMenu {...items} key={items?.id} />;
-        })} */}
-        <FoodMenu />
-      </div>
-    </>
+    <div className="flex flex-wrap">
+      {cartItems.map((item) => (
+        <Test {...item} key={item.id} />
+      ))}
+    </div>
   );
 };
-
-// cloudinaryImageId;
-// name;
-// price;
-// restId;
 
 export default CartItems;
