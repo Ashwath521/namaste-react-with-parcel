@@ -38,6 +38,7 @@ const BodyComponent = () => {
       <div className=" m-2 p-4">
         <div className="text-center">
           <input
+            data-testid="search-input"
             type="text"
             className="mt-1  px-3 py-2 text-black bg-white border border-slate-300 rounded-md text-md shadow-sm placeholder-slate-400
       focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
@@ -59,7 +60,7 @@ const BodyComponent = () => {
             Search
           </button>
         </div>
-        <div className="flex flex-wrap ">
+        <div className="flex flex-wrap " data-testid="res-list">
           {filterRestaurantData?.length === 0 ? (
             <FilterShimmer />
           ) : (
